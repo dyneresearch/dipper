@@ -24,6 +24,10 @@
     "claude",
     "cursor"
   ],
-  "author": "Dipper Team",
+  "author": "Dyne Research",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dyneresearch/dipper.git"
+  },
   "license": "MIT"
 }

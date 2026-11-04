@@ -1,5 +1,10 @@
 <div align="center">
 
+<img src="./banner.png" alt="dyne research | Dipper" width="100%" />
+
+<br/>
+<br/>
+
 # 🪣 Dipper (`repo-dipper`)
 
 ### **The Agentic Context-Dipper for LLMs & AI Coding Agents**
