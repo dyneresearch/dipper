@@ -16,3 +16,4 @@ func (j *JWTAuthenticator) VerifySignature(rawToken string) (*TokenClaims, error
     // 80 lines of cryptography, base64 decoding, and time checks
     return &TokenClaims{UserID: "usr_1", ExpiresAt: time.Now()}, nil
 }
+

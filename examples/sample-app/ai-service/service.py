@@ -17,3 +17,4 @@ def create_embeddings(prompt: str) -> Dict[str, any]:
     engine = InferenceEngine("text-embedding-3-small")
     vec = engine.embed_text(prompt)
     return {"data": vec, "usage": {"tokens": 12}}
+
