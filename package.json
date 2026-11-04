@@ -1,0 +1,29 @@
+{
+  "name": "repo-dipper",
+  "version": "0.1.0",
+  "description": "Ultra-compressed architectural blueprints for AI coding agents with on-demand symbol dipping.",
+  "type": "module",
+  "main": "./src/index.js",
+  "bin": {
+    "repo-dipper": "./bin/dipper.js",
+    "dipper": "./bin/dipper.js"
+  },
+  "scripts": {
+    "start": "node ./bin/dipper.js",
+    "test": "node ./test/test.js"
+  },
+  "keywords": [
+    "llm",
+    "agents",
+    "mcp",
+    "model-context-protocol",
+    "repomix",
+    "context-window",
+    "ast",
+    "code-analysis",
+    "claude",
+    "cursor"
+  ],
+  "author": "Dipper Team",
+  "license": "MIT"
+}
