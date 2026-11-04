@@ -103,8 +103,17 @@ async function main() {
       rootDirectory: scanResult.rootDirectory,
     });
 
-    if (bp.symbolIndex.has(symbolTarget)) {
-      const sym = bp.symbolIndex.get(symbolTarget);
+    let sym = bp.symbolIndex.get(symbolTarget);
+    if (!sym) {
+      for (const [key, value] of bp.symbolIndex.entries()) {
+        if (key.endsWith(symbolTarget) || key.endsWith('#' + symbolTarget) || value.name === symbolTarget) {
+          sym = value;
+          break;
+        }
+      }
+    }
+
+    if (sym) {
       const fileRec = scanResult.files.find((f) => f.relativePath === sym.relativePath);
       const dipped = dipSymbol(fileRec.content, sym);
       console.log(c.cyan(`// Dipped: ${dipped.symbolId} (L${dipped.startLine}-L${dipped.endLine})`));
@@ -177,3 +186,4 @@ main().catch((err) => {
   console.error(c.red(`Unexpected error: ${err.stack || err.message}`));
   process.exit(1);
 });
+

@@ -188,9 +188,18 @@ export async function startMcpServer(targetDirectory = process.cwd()) {
           const target = args.symbol_or_path || '';
           const contextLines = Number(args.context_lines) || 2;
 
-          // Check if target is a symbol ID
-          if (bp.symbolIndex.has(target)) {
-            const sym = bp.symbolIndex.get(target);
+          // Check if target is a symbol ID (exact or partial suffix match)
+          let sym = bp.symbolIndex.get(target);
+          if (!sym) {
+            for (const [key, val] of bp.symbolIndex.entries()) {
+              if (key.endsWith(target) || key.endsWith('#' + target) || val.name === target) {
+                sym = val;
+                break;
+              }
+            }
+          }
+
+          if (sym) {
             const fileRec = repositoryData.scanResult.files.find(
               (f) => f.relativePath === sym.relativePath
             );
@@ -323,3 +332,4 @@ export async function startMcpServer(targetDirectory = process.cwd()) {
 
   log('Ready to receive MCP requests.');
 }
+

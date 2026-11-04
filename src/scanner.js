@@ -161,3 +161,4 @@ export async function scanRepository(rootDirectory, options = {}) {
     totalRawBytes,
   };
 }
+
