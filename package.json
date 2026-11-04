@@ -24,7 +24,8 @@
     "claude",
     "cursor"
   ],
-  "author": "Dyne Research",
+  "author": "Dyne Research (https://dyneresearch.com)",
+  "homepage": "https://dyneresearch.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/dyneresearch/dipper.git"

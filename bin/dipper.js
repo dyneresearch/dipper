@@ -26,7 +26,7 @@ const options = {
 
 function printHelp() {
   console.log(`
-${c.bold('DIPPER')} ${c.gray(`v${pkg.version}`)}
+${c.bold('DIPPER')} ${c.gray(`v${pkg.version} • Dyne Research (https://dyneresearch.com)`)}
 ${c.cyan('Ultra-compressed architectural blueprints for AI agents with on-demand symbol dipping.')}
 
 ${c.bold('USAGE:')}
@@ -179,7 +179,8 @@ async function main() {
   console.log(`  ${c.green('✔')} Indexed in ${c.bold(durationMs + 'ms')}`);
   console.log(`  ${c.green('✔')} Blueprint written to: ${c.bold(path.relative(process.cwd(), resolvedOut))}`);
   console.log(`  ${c.cyan('ℹ')} Symbols mapped: ${c.bold(blueprint.metrics.totalSymbols)}`);
-  console.log(`  ${c.dim('Run "dipper serve" to activate MCP server for Cursor & Claude Desktop.')}\n`);
+  console.log(`  ${c.dim('Run "dipper serve" to activate MCP server for Cursor & Claude Desktop.')}`);
+  console.log(`  ${c.dim('Developed by Dyne Research • https://dyneresearch.com')}\n`);
 }
 
 main().catch((err) => {

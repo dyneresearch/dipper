@@ -17,6 +17,10 @@
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey.svg)](package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+<p align="center">
+  <sub>An open-source research initiative by <a href="https://dyneresearch.com"><b>Dyne Research</b></a></sub>
+</p>
+
 <br/>
 
 <p align="center">
@@ -62,7 +66,9 @@ npx repo-dipper --stdout | pbcopy
 
 ---
 
-## 🧠 The Problem: The "Context-Stuffing" Trap
+## 🧠 Motivation: Why We Built This
+
+While benchmarking autonomous multi-agent coding workflows on large production repositories at [Dyne Research](https://dyneresearch.com), we hit a universal bottleneck: **the context-stuffing trap**.
 
 When using frontier LLMs (**Claude 3.5 Sonnet, GPT-4o, o1, o3-mini, DeepSeek R1**) for codebase tasks, developers are currently caught between two flawed paradigms:
 
@@ -248,6 +254,15 @@ Contributions are welcome! If you'd like to add support for additional languages
 
 ---
 
+## 🔬 Built by Dyne Research
+
+**Dipper** is developed and maintained by the team at **[Dyne Research](https://dyneresearch.com)**. We engineer high-efficiency foundational infrastructure and agentic tooling for autonomous software development.
+
+- 🌐 **Website:** [dyneresearch.com](https://dyneresearch.com)
+- 🐙 **GitHub:** [@dyneresearch](https://github.com/dyneresearch)
+
+---
+
 ## 📄 License
 
-MIT © [Dipper Contributors](LICENSE)
+MIT © [Dyne Research & Contributors](LICENSE)
